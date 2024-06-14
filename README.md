@@ -1,19 +1,19 @@
 # API de games
 
-Esta API e apenas para teste de estudos!!
+Esta API é apenas para fins de estudo e testes.
 
 ## Endpoints
 
 ### GET /games
-Esse endpoint e responsavel por retornar a listaagem de todos os games cadastrados no banco de dados.
+Este endpoint é responsável por retornar a listagem de todos os jogos cadastrados no banco de dados.
 
-#### Parametros
+#### Parâmetros
 
-email: E-mail do Usuario cadastrado no sistema,
+email: E-mail do usuário cadastrado no sistema.
 
-password: Senha do usuario cadastrado no sistema, com aquele determinado e-mail
+password: Senha do usuário cadastrado no sistema com o e-mail correspondente.
 
-Exemplo: 
+Exemplo de Requisição:
 
 ```
 
@@ -33,7 +33,7 @@ Exemplo:
 #### Respostas
 
 ##### OK! 200
-Caso essa resposta aconteca voce vai receber a listagem de todos os games.
+Caso essa resposta ocorra, você receberá a listagem de todos os jogos.
 
 
 Exemplo de Resposta:
@@ -74,8 +74,8 @@ Exemplo de Resposta:
 
 
 
-##### Falha na Autenticacao! 401
-Caso essa resposta aconteca isso signfica que aconteceu alguma falha durante o processo de autenticacao da requisicao. Motivos: Senha ou e-mail incorretos.
+##### Falha na Autenticação! 401
+Caso essa resposta ocorra, isso significa que houve uma falha durante o processo de autenticação da requisição. Motivos: senha ou e-mail incorretos.
 
 
 Exemplo de Resposta: 
@@ -91,14 +91,14 @@ Exemplo de Resposta:
 ### POST /auth
 Esse endpoint e responsavel por fazer o processo de login
 
-#### Parametros
+#### Parâmetros
 
 Nenhum
 
 #### Respostas
 
 ##### OK! 200
-Caso essa resposta aconteca voce vai receber o Token JWT para conseguir acessar endpoints protegidos na API .
+Caso essa resposta ocorra, você receberá o Token JWT para conseguir acessar endpoints protegidos na API.
 
 
 Exemplo de Resposta:
