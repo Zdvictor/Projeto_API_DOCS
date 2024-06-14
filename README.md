@@ -1,6 +1,6 @@
 # API de games
 
-Esta API e utilizada para TAL e TAL....
+Esta API e apenas para teste de estudos!!
 
 ## Endpoints
 
@@ -9,7 +9,7 @@ Esse endpoint e responsavel por retornar a listaagem de todos os games cadastrad
 
 #### Parametros
 
-email: E-mail do Usuario caadastrado no sistema,
+email: E-mail do Usuario cadastrado no sistema,
 
 password: Senha do usuario cadastrado no sistema, com aquele determinado e-mail
 
@@ -18,8 +18,8 @@ Exemplo:
 ```
 
 {
-    
-    "email": "victorlima@gmail.com",
+
+    "email": "zdvictor@gmail.com",
     "password": "12345"
 
 }
