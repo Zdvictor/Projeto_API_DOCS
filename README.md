@@ -112,3 +112,44 @@ Exemplo de Resposta:
 ```
 
 
+
+
+### PUT /game
+
+#### Parâmetros
+
+ID: Id do jogo deve ser passador na rota ex: `http://localhost:8080/game/:id`
+
+#### Respostas
+
+##### OK! 200
+Caso essa resposta ocorra, a atualização ocorreu com sucesso.
+
+
+Exemplo de Resposta:
+
+`
+OK
+`
+
+
+
+### DELETE /game
+
+#### Parâmetros
+
+ID: Id do jogo deve ser passador na rota ex: `http://localhost:8080/game/:id`
+
+#### Respostas
+
+##### OK! 200
+Caso essa resposta ocorra, a atualização ocorreu com sucesso.
+
+
+Exemplo de Resposta:
+
+`
+OK
+`
+
+
