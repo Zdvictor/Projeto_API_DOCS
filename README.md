@@ -4,22 +4,26 @@ Esta API é apenas para fins de estudo e testes.
 
 ## Endpoints
 
-### GET /games
-Este endpoint é responsável por retornar a listagem de todos os jogos cadastrados no banco de dados.
+
+### POST /subscribe
+Esse endpoint e responsavel por fazer o cadastro do usuário
 
 #### Parâmetros
 
-email: E-mail do usuário cadastrado no sistema.
+name: Nome do usuário
 
-password: Senha do usuário cadastrado no sistema com o e-mail correspondente.
+email: E-mail do usuário.
+
+password: Senha do usuário.
+
 
 Exemplo de Requisição:
 
 ```
 
 {
-
-    "email": "zdvictor@gmail.com",
+    "name": "Victor"
+    "email": "victor@teste.com",
     "password": "12345"
 
 }
@@ -29,6 +33,86 @@ Exemplo de Requisição:
 
 ```
 
+#### Respostas
+
+##### OK! 200
+Caso essa resposta ocorra, seu usuário foi cadastrado com sucesso.
+
+
+
+
+
+
+
+
+
+
+### POST /auth
+Esse endpoint e responsavel por fazer o processo de login
+
+#### Parâmetros
+
+email: E-mail do usuário cadastrado no sistema.
+
+password: Senha do usuário cadastrado no sistema com o e-mail correspondente.
+
+
+Exemplo de Requisição:
+
+```
+
+{
+
+    "email": "victor@teste.com",
+    "password": "12345"
+
+}
+
+
+
+
+```
+
+#### Respostas
+
+##### OK! 200
+Caso essa resposta ocorra, você receberá o Token JWT para conseguir acessar endpoints protegidos na API.
+
+
+Exemplo de Resposta:
+
+```
+
+{
+    "Token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJ2aWN0b3JsaW1hQGdtYWlsLmNvbSIsImlhdCI6MTcxODI4NjQ1MCwiZXhwIjoxNzE4MjkwMDUwfQ.Tr45yG9pjB6h9VaTYvUEMiCtbefqc4afETb3olD2Fto"
+}
+
+```
+
+##### Falha na Autenticação! 401
+Caso essa resposta ocorra, isso significa que houve uma falha durante o processo de autenticação da requisição. Motivos: senha ou e-mail incorretos.
+
+
+Exemplo de Resposta: 
+
+```
+
+{err: "Credencias Invalidas"}
+
+```
+
+
+
+
+
+
+### GET /games
+Este endpoint é responsável por retornar a listagem de todos os jogos cadastrados no banco de dados.
+
+#### Parâmetros
+
+Token: Use o token recebido na rota /auth na requisição para obter acesso. Exemplo de token:
+`eyJhbGciOiJIUzI1kaIsInR5daI12kpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJ2aWN0b3JsaW1hQGdtYWlsLmNvbSIsImlhdCI6MTcyMDE5ODk4NSwiZXhwIjoxNzIwMjAyNTg1fQ.BlbSiW_uc7EAaKXQsNs-3a9PJA0dQtGrBDCB_DvO2dw`
 
 #### Respostas
 
@@ -74,43 +158,6 @@ Exemplo de Resposta:
 
 
 
-##### Falha na Autenticação! 401
-Caso essa resposta ocorra, isso significa que houve uma falha durante o processo de autenticação da requisição. Motivos: senha ou e-mail incorretos.
-
-
-Exemplo de Resposta: 
-
-```
-
-{err: "Credencias Invalidas"}
-
-```
-
-
-
-### POST /auth
-Esse endpoint e responsavel por fazer o processo de login
-
-#### Parâmetros
-
-Nenhum
-
-#### Respostas
-
-##### OK! 200
-Caso essa resposta ocorra, você receberá o Token JWT para conseguir acessar endpoints protegidos na API.
-
-
-Exemplo de Resposta:
-
-```
-
-{
-    "Token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJ2aWN0b3JsaW1hQGdtYWlsLmNvbSIsImlhdCI6MTcxODI4NjQ1MCwiZXhwIjoxNzE4MjkwMDUwfQ.Tr45yG9pjB6h9VaTYvUEMiCtbefqc4afETb3olD2Fto"
-}
-
-```
-
 
 
 
@@ -131,6 +178,10 @@ Exemplo de Resposta:
 `
 OK
 `
+
+
+
+
 
 
 
